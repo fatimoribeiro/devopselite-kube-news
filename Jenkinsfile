@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage ('Build Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     dockerapp = docker.build("fatimoribeiro/devopselite-kube-news:${env_BUILD_ID}", '-f ./src/Dockerfile ./src')
@@ -10,6 +10,7 @@ pipeline {
             }
         }
 
+        /*
         stage ('Push Docker Image') {
             steps {
                 script {
@@ -32,5 +33,6 @@ pipeline {
                 }
             }
         }
+        */
     }
 }
