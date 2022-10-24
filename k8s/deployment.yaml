@@ -50,7 +50,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: fatimoribeiro/devopselite-kube-news:v1
+          image: fatimoribeiro/devopselite-kube-news:{{TAG}}
           ports:
           - containerPort: 8080
           env:
